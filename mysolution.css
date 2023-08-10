@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap");
+
+:root {
+  ---Dark-brown: hsl(25, 47%, 15%);
+  ---Medium-brown: hsl(28, 10%, 53%);
+  ---Cream: hsl(27, 66%, 92%);
+  ---Very-pale-orange: hsl(33, 100%, 98%);
+  ---Soft-red: hsl(10, 79%, 65%);
+  ---Cyan: hsl(186, 34%, 60%);
+  ---Font-size: 18px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "DM Sans", sans-serif;
+  min-height: 100vh;
+  background-color: var(---Cream);
+}
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.balance-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 350px;
+  background-color: var(---Soft-red);
+  padding: 20px;
+  border-radius: 10px;
+  color: var(---Very-pale-orange);
+  position: relative;
+}
+.balance-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.balance-info_text {
+  font-size: 10px;
+  font-weight: 400;
+}
+.balance-info_num {
+  font-size: 20px;
+}
+.balance-button_circle1 {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: var(---Dark-brown);
+}
+.balance-button_circle2 {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: 2px solid var(---Cream);
+  position: absolute;
+  top: 25px;
+  right: 40px;
+}
+.chart-wrapper {
+  width: 350px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: var(---Very-pale-orange);
+}
+.chart-header {
+  font-size: 22px;
+  margin-top: 15px;
+}
+.chart-days {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+.chart_spending {
+  font-size: 10px;
+  background-color: var(---Dark-brown);
+  color: var(---Very-pale-orange);
+  padding: 5px;
+  border-radius: 3px;
+  display: none;
+}
+.chart-days_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chart_pie-chart {
+  width: 30px;
+  height: 150px;
+  border-radius: 3px;
+  background-color: var(---Soft-red);
+  margin: 8px 0;
+  cursor: pointer;
+}
+.chart_pie-chart:hover {
+  background-color: hsla(10, 79%, 65%, 0.6);
+}
+#monday-chart {
+  height: 50px;
+}
+#tuesday-chart {
+  height: 90px;
+}
+#wednesday-chart {
+  height: 130px;
+  background-color: var(---Cyan);
+}
+#wednesday-chart:hover {
+  background-color: hsla(186, 34%, 60%, 0.6);
+}
+#thursday-chart {
+  height: 80px;
+}
+#friday-chart {
+  height: 50px;
+}
+#saturday-chart {
+  height: 100px;
+}
+#sunday-chart {
+  height: 70px;
+}
+.chart-day {
+  font-size: 12px;
+  color: var(---Medium-brown);
+}
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid var(---Medium-brown);
+}
+.chart-month_balance {
+  display: flex;
+  justify-content: space-between;
+  color: var(---Dark-brown);
+}
+
+.chart-month_current_text {
+  font-size: 10px;
+}
+.chart-month_current_num {
+  /* margin-top: 5px; */
+  font-size: 28px;
+  font-weight: 700;
+}
+.chart-month_last-month {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: end;
+}
+.chart-month_last-perc {
+  font-size: 12px;
+  font-weight: 700;
+}
+.chart-month_last-text {
+  font-size: 10px;
+}
